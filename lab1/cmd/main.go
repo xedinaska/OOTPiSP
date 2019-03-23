@@ -4,7 +4,7 @@ import (
 	"github.com/xedinaska/OOTPiSP/lab1/model"
 )
 
-func main()  {
+func main() {
 	//allocate memory for slice of 6 geometrical figures
 	figures := make(model.Figures, 6)
 
@@ -12,11 +12,11 @@ func main()  {
 	figures = model.Figures{
 		&model.Line{
 			Start: &model.Point{X: 10, Y: 10},
-			End: &model.Point{X: 20, Y: 20},
+			End:   &model.Point{X: 20, Y: 20},
 		},
 		&model.Circle{
 			Center: &model.Point{X: 10, Y: 10},
-			R: 5,
+			R:      5,
 		},
 		&model.Rectangle{
 			TLCorner: &model.Point{X: 10, Y: 10},
@@ -24,12 +24,12 @@ func main()  {
 		},
 		&model.Square{
 			TLCorner: &model.Point{X: 50, Y: 50},
-			R: 10,
+			R:        10,
 		},
-		&model.Ellipse{
-			Center: &model.Point{X: 50, Y: 50},
-			Xr: 20,
-			Yr: 50,
+		&model.Triangle{
+			A: &model.Point{X: 50, Y: 50},
+			B: &model.Point{X: 100, Y: 100},
+			C: &model.Point{X: 150, Y: 50},
 		},
 		&model.Polygon{
 			Points: []*model.Point{

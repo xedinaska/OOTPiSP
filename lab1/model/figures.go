@@ -25,7 +25,7 @@ func (l *Line) Draw() {
 //Circle with center in "Center" point and it has radius R
 type Circle struct {
 	Center *Point
-	R int
+	R      int
 }
 
 func (c *Circle) Draw() {
@@ -42,21 +42,21 @@ func (r *Rectangle) Draw() {
 	log.Printf("Rectangle([%d, %d], [%d, %d])\n", r.TLCorner.X, r.TLCorner.Y, r.BRCorner.X, r.BRCorner.Y)
 }
 
-//Ellipse is described by center coords and radius in Ox & Oy
-type Ellipse struct {
-	Center *Point
-	Xr int
-	Yr int
+//Triangle is described by A-B-C points
+type Triangle struct {
+	A *Point
+	B *Point
+	C *Point
 }
 
-func (e *Ellipse) Draw() {
-	log.Printf("Ellipse([%d, %d], %d/X, %d/Y)", e.Center.X, e.Center.Y, e.Xr, e.Yr)
+func (t *Triangle) Draw() {
+	log.Printf("Triangle([%v, %v, %v])", t.A, t.B, t.C)
 }
 
 //Square is described by top left corner coords and side size (R)
 type Square struct {
 	TLCorner *Point
-	R int
+	R        int
 }
 
 func (s *Square) Draw() {

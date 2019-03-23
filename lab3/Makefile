@@ -1,7 +1,6 @@
-# Go parameters
-BINARY = ./bin/app
+#!make
 
-all: build
+BINARY = ./bin/app
 
 lint:
 	goimports -w $$(ls -d */ | grep -v vendor)
@@ -10,3 +9,6 @@ lint:
 
 build:
 	go build -o $(BINARY) cmd/main.go
+
+run: build
+	 ./$(BINARY)
